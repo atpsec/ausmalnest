@@ -1,4 +1,4 @@
-import type { MetadataRoute } from "next";
+﻿import type { MetadataRoute } from "next";
 import { categories, coloringPages } from "@/lib/content";
 
 const baseUrl = "https://ausmalnest.vercel.app";
@@ -26,10 +26,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
       priority: 0.8,
     })),
     ...coloringPages.map((page) => ({
-      url: `${baseUrl}/ausmalbilder/${page.category}/${page.slug}`,
+      url: `${baseUrl}/ausmalbilder/${page.categorySlug}/${page.slug}`,
       lastModified: now,
       changeFrequency: "monthly" as const,
       priority: 0.7,
     })),
   ];
 }
+

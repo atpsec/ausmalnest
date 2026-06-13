@@ -1,12 +1,12 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { ColoringPageCard } from "@/components/ColoringPageCard";
 import { categories, coloringPages, getPagesByCategory } from "@/lib/content";
 
 export const metadata: Metadata = {
-  title: "Ausmalbilder kostenlos für Kinder",
+  title: "Ausmalbilder kostenlos fÃ¼r Kinder",
   description:
-    "Kostenlose Lern-Ausmalbilder für Kinder. Druckvorlagen für Kita, Kindergarten, Vorschule und Grundschule.",
+    "Kostenlose Lern-Ausmalbilder fÃ¼r Kinder. Druckvorlagen fÃ¼r Kita, Kindergarten, Vorschule und Grundschule.",
 };
 
 export default function AusmalbilderPage() {
@@ -18,7 +18,7 @@ export default function AusmalbilderPage() {
           Ausmalbilder kostenlos zum Ausdrucken
         </h1>
         <p className="mt-5 text-lg leading-8 text-stone-700">
-          Kuratierte Malvorlagen für Kinder von 3 bis 7 Jahren. Jede Vorlage ist auf klare Linien, einfache Formen und pädagogischen Nutzen ausgelegt.
+          Kuratierte Malvorlagen fÃ¼r Kinder von 3 bis 7 Jahren. Jede Vorlage ist auf klare Linien, einfache Formen und pÃ¤dagogischen Nutzen ausgelegt.
         </p>
       </div>
 
@@ -29,7 +29,7 @@ export default function AusmalbilderPage() {
             href={`/ausmalbilder/${category.slug}`}
             className="rounded-2xl border border-stone-200 bg-white p-5 transition hover:-translate-y-0.5 hover:shadow-sm"
           >
-            <p className="font-semibold text-stone-950">{category.shortName}</p>
+            <p className="font-semibold text-stone-950">{category.name}</p>
             <p className="mt-2 text-sm text-stone-600">{getPagesByCategory(category.slug).length} Vorlagen</p>
           </Link>
         ))}
@@ -46,3 +46,5 @@ export default function AusmalbilderPage() {
     </main>
   );
 }
+
+

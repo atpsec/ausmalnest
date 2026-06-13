@@ -1,7 +1,17 @@
-import type { ColoringPage } from "@/lib/content";
+﻿type IllustrationVariant =
+  | "cat"
+  | "apple"
+  | "number"
+  | "dino"
+  | "car"
+  | "shape"
+  | "tree"
+  | "gift"
+  | "rabbit"
+  | "lines";
 
 type Props = {
-  variant: ColoringPage["illustration"];
+  variant: IllustrationVariant;
   title: string;
   large?: boolean;
 };
@@ -166,3 +176,6 @@ function Lines() {
     </g>
   );
 }
+
+
+

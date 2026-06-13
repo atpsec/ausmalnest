@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ColoringIllustration } from "@/components/ColoringIllustration";
@@ -34,13 +34,13 @@ export default async function PrintPage({ params }: Props) {
     notFound();
   }
 
-  const category = getCategory(page.category);
+  const category = getCategory(page.categorySlug)!;
 
   return (
     <main className="mx-auto max-w-[900px] bg-white px-6 py-6 print:p-0">
       <div className="no-print mb-6 flex items-center justify-between rounded-2xl border border-stone-200 bg-stone-50 p-4 text-sm">
-        <Link href={`/ausmalbilder/${page.category}/${page.slug}`} className="font-semibold text-stone-950 underline underline-offset-4">
-          Zurück zur Vorlage
+        <Link href={`/ausmalbilder/${page.categorySlug}/${page.slug}`} className="font-semibold text-stone-950 underline underline-offset-4">
+          ZurÃ¼ck zur Vorlage
         </Link>
         <span className="rounded-full bg-stone-950 px-4 py-2 font-semibold text-white">
           Drucken: Strg+P / Cmd+P
@@ -56,16 +56,16 @@ export default async function PrintPage({ params }: Props) {
           </div>
           <div className="rounded-2xl border-4 border-stone-950 px-5 py-3 text-center">
             <p className="text-xs font-bold uppercase tracking-[0.2em]">Alter</p>
-            <p className="text-lg font-bold">{page.age}</p>
+            <p className="text-lg font-bold">{`${page.ageMin}–${page.ageMax} Jahre`}</p>
           </div>
         </div>
 
         <div className="mt-8">
-          <ColoringIllustration variant={page.illustration} title={page.title} large />
+          <ColoringIllustration variant={"shape"} title={page.title} large />
         </div>
 
         <div className="mt-8 grid grid-cols-3 gap-3 text-center text-sm font-semibold">
-          {page.usage.map((usage) => (
+          {category.audience.map((usage) => (
             <div key={usage} className="rounded-xl border-2 border-stone-950 p-3">{usage}</div>
           ))}
         </div>
@@ -73,3 +73,6 @@ export default async function PrintPage({ params }: Props) {
     </main>
   );
 }
+
+
+

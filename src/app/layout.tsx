@@ -1,15 +1,15 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://ausmalnest.vercel.app"),
   title: {
-    default: "AusmalNest - Lern-Ausmalbilder für Kinder",
+    default: "AusmalNest - Lern-Ausmalbilder fÃ¼r Kinder",
     template: "%s | AusmalNest",
   },
   description:
-    "Kostenlose Lern-Ausmalbilder für Kita, Kindergarten, Vorschule und Grundschule. Druckvorlagen für Eltern und Pädagog:innen.",
+    "Kostenlose Lern-Ausmalbilder fÃ¼r Kita, Kindergarten, Vorschule und Grundschule. Druckvorlagen fÃ¼r Eltern und PÃ¤dagog:innen.",
 };
 
 export default function RootLayout({
@@ -40,7 +40,7 @@ export default function RootLayout({
           <div className="mx-auto max-w-6xl px-5 py-10 text-sm text-stone-600">
             <p className="font-medium text-stone-950">AusmalNest</p>
             <p className="mt-2 max-w-2xl">
-              Ein MVP für deutschsprachige Lern-Ausmalbilder. Keine Nutzerprofile, keine Kinderkonten, keine lizenzierten Figuren.
+              Ein MVP fÃ¼r deutschsprachige Lern-Ausmalbilder. Keine Nutzerprofile, keine Kinderkonten, keine lizenzierten Figuren.
             </p>
           </div>
         </footer>
@@ -48,3 +48,4 @@ export default function RootLayout({
     </html>
   );
 }
+

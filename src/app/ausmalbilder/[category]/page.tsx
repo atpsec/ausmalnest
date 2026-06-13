@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+﻿import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { ColoringPageCard } from "@/components/ColoringPageCard";
@@ -41,13 +41,13 @@ export default async function CategoryPage({ params }: Props) {
       <nav className="text-sm text-stone-600" aria-label="Breadcrumb">
         <Link href="/ausmalbilder" className="hover:text-stone-950">Ausmalbilder</Link>
         <span className="mx-2">/</span>
-        <span>{category.shortName}</span>
+        <span>{category.name}</span>
       </nav>
 
       <div className="mt-8 max-w-3xl">
         <p className="text-sm font-semibold uppercase tracking-[0.3em] text-stone-500">Kategorie</p>
         <h1 className="mt-4 text-4xl font-bold tracking-tight text-stone-950 sm:text-5xl">{category.name}</h1>
-        <p className="mt-5 text-lg leading-8 text-stone-700">{category.description}</p>
+        <p className="mt-5 text-lg leading-8 text-stone-700">{category.intro}</p>
       </div>
 
       <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -58,9 +58,11 @@ export default async function CategoryPage({ params }: Props) {
 
       {pages.length === 0 && (
         <div className="mt-10 rounded-3xl border border-dashed border-stone-300 bg-white p-8 text-stone-600">
-          Diese Kategorie ist vorbereitet. Die ersten Vorlagen werden als nächstes eingepflegt.
+          Diese Kategorie ist vorbereitet. Die ersten Vorlagen werden als nÃ¤chstes eingepflegt.
         </div>
       )}
     </main>
   );
 }
+
+

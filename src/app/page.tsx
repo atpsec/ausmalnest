@@ -1,4 +1,4 @@
-import Link from "next/link";
+﻿import Link from "next/link";
 import { ColoringPageCard } from "@/components/ColoringPageCard";
 import { categories, coloringPages } from "@/lib/content";
 
@@ -13,10 +13,10 @@ export default function Home() {
             Kita / Kindergarten / Vorschule
           </p>
           <h1 className="mt-5 max-w-4xl text-5xl font-bold tracking-tight text-stone-950 sm:text-6xl">
-            Kostenlose Lern-Ausmalbilder für Kinder.
+            Kostenlose Lern-Ausmalbilder fÃ¼r Kinder.
           </h1>
           <p className="mt-6 max-w-2xl text-lg leading-8 text-stone-700">
-            AusmalNest startet als kuratierte Sammlung druckfertiger Malvorlagen für Eltern, Lehrer:innen und Erzieher:innen. Der Fokus liegt auf einfachen Motiven, Lernwert und sicherer Nutzung ohne Kinderprofile.
+            AusmalNest startet als kuratierte Sammlung druckfertiger Malvorlagen fÃ¼r Eltern, Lehrer:innen und Erzieher:innen. Der Fokus liegt auf einfachen Motiven, Lernwert und sicherer Nutzung ohne Kinderprofile.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row">
             <Link
@@ -29,7 +29,7 @@ export default function Home() {
               href="#mvp"
               className="rounded-full border border-stone-300 bg-white px-6 py-3 text-center text-sm font-semibold text-stone-950 transition hover:border-stone-950"
             >
-              MVP-Umfang prüfen
+              MVP-Umfang prÃ¼fen
             </a>
           </div>
         </div>
@@ -42,8 +42,8 @@ export default function Home() {
                   href={`/ausmalbilder/${category.slug}`}
                   className="rounded-2xl border border-stone-200 bg-white p-4 transition hover:-translate-y-0.5 hover:shadow-sm"
                 >
-                  <p className="text-sm font-semibold text-stone-950">{category.shortName}</p>
-                  <p className="mt-2 text-xs leading-5 text-stone-600">{category.description}</p>
+                  <p className="text-sm font-semibold text-stone-950">{category.name}</p>
+                  <p className="mt-2 text-xs leading-5 text-stone-600">{category.intro}</p>
                 </Link>
               ))}
             </div>
@@ -59,7 +59,7 @@ export default function Home() {
               <h2 className="mt-3 text-3xl font-bold tracking-tight text-stone-950">Startkollektion</h2>
             </div>
             <Link href="/ausmalbilder" className="text-sm font-semibold text-stone-950 underline underline-offset-4">
-              Alle Kategorien öffnen
+              Alle Kategorien Ã¶ffnen
             </Link>
           </div>
           <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
@@ -79,7 +79,7 @@ export default function Home() {
               ["10 Kategorien", "Buchstaben, Zahlen, Tiere, Formen und saisonale Themen."],
               ["Druckansicht", "Jede Vorlage hat eine eigene druckfreundliche Seite."],
               ["SEO-Struktur", "Saubere URLs, Metadaten, Sitemap und Robots-Datei."],
-              ["Kindersicher", "Keine Profile, keine Uploads, keine geschützten Figuren."],
+              ["Kindersicher", "Keine Profile, keine Uploads, keine geschÃ¼tzten Figuren."],
             ].map(([title, text]) => (
               <div key={title} className="rounded-2xl bg-white/10 p-5 ring-1 ring-white/10">
                 <h3 className="font-semibold">{title}</h3>
@@ -92,3 +92,4 @@ export default function Home() {
     </main>
   );
 }
+
